@@ -26,8 +26,7 @@ namespace FrontPrueba.Vistas
             inicioForm.Show();
 
             // Cerrar el formulario Login (el actual)
-            this.Hide(); // lo ocultas para no cerrarlo del todo
-                         // this.Close(); // si prefieres cerrarlo completamente
+            this.Hide(); 
         }
     }
 }

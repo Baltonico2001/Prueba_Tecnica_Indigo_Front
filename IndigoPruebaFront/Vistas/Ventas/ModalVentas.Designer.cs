@@ -29,81 +29,108 @@
         private void InitializeComponent()
         {
             label1 = new Label();
+            btnAgregarProducto = new Button();
+            textBoxNombre = new TextBox();
             label2 = new Label();
+            textBoxPrecio = new TextBox();
             label3 = new Label();
+            textBoxStock = new TextBox();
             label4 = new Label();
-            button1 = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
-            label1.Location = new Point(274, 9);
+            label1.Location = new Point(92, 9);
             label1.Name = "label1";
             label1.Size = new Size(283, 38);
             label1.TabIndex = 7;
-            label1.Text = "ESPECIFIQUE LA VENTA  ";
+            label1.Text = "AGREGAR";
             label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // btnAgregarProducto
+            // 
+            btnAgregarProducto.Location = new Point(195, 325);
+            btnAgregarProducto.Name = "btnAgregarProducto";
+            btnAgregarProducto.Size = new Size(75, 23);
+            btnAgregarProducto.TabIndex = 11;
+            btnAgregarProducto.Text = "Agregar";
+            btnAgregarProducto.UseVisualStyleBackColor = true;
+            btnAgregarProducto.Click += btnAgregarProducto_Click;
+            // 
+            // textBoxNombre
+            // 
+            textBoxNombre.Location = new Point(146, 123);
+            textBoxNombre.Name = "textBoxNombre";
+            textBoxNombre.Size = new Size(179, 23);
+            textBoxNombre.TabIndex = 13;
             // 
             // label2
             // 
-            label2.BackColor = SystemColors.AppWorkspace;
-            label2.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
-            label2.Location = new Point(274, 61);
+            label2.Location = new Point(146, 89);
             label2.Name = "label2";
-            label2.Size = new Size(283, 174);
-            label2.TabIndex = 8;
-            label2.Text = "Imagen   ";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
+            label2.Size = new Size(179, 21);
+            label2.TabIndex = 12;
+            label2.Text = "Nombre Producto";
+            // 
+            // textBoxPrecio
+            // 
+            textBoxPrecio.Location = new Point(146, 198);
+            textBoxPrecio.Name = "textBoxPrecio";
+            textBoxPrecio.Size = new Size(179, 23);
+            textBoxPrecio.TabIndex = 15;
             // 
             // label3
             // 
-            label3.BackColor = SystemColors.AppWorkspace;
-            label3.Location = new Point(274, 260);
+            label3.Location = new Point(146, 164);
             label3.Name = "label3";
-            label3.Size = new Size(283, 23);
-            label3.TabIndex = 9;
-            label3.Text = "Cantidad";
+            label3.Size = new Size(179, 21);
+            label3.TabIndex = 14;
+            label3.Text = "Precio";
+            // 
+            // textBoxStock
+            // 
+            textBoxStock.Location = new Point(146, 280);
+            textBoxStock.Name = "textBoxStock";
+            textBoxStock.Size = new Size(179, 23);
+            textBoxStock.TabIndex = 17;
             // 
             // label4
             // 
-            label4.BackColor = SystemColors.AppWorkspace;
-            label4.Location = new Point(274, 302);
+            label4.Location = new Point(146, 246);
             label4.Name = "label4";
-            label4.Size = new Size(283, 23);
-            label4.TabIndex = 10;
-            label4.Text = "Total Pago";
-            // 
-            // button1
-            // 
-            button1.Location = new Point(372, 345);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 11;
-            button1.Text = "Vender";
-            button1.UseVisualStyleBackColor = true;
+            label4.Size = new Size(179, 21);
+            label4.TabIndex = 16;
+            label4.Text = "Stock";
             // 
             // ModalVentas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button1);
+            ClientSize = new Size(459, 390);
+            Controls.Add(textBoxStock);
             Controls.Add(label4);
+            Controls.Add(textBoxPrecio);
             Controls.Add(label3);
+            Controls.Add(textBoxNombre);
             Controls.Add(label2);
+            Controls.Add(btnAgregarProducto);
             Controls.Add(label1);
             Name = "ModalVentas";
             Text = "ModalVentas";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Label label1;
+        private Button btnAgregarProducto;
+        private TextBox textBoxNombre;
         private Label label2;
+        private TextBox textBoxPrecio;
         private Label label3;
+        private TextBox textBoxStock;
         private Label label4;
-        private Button button1;
     }
 }

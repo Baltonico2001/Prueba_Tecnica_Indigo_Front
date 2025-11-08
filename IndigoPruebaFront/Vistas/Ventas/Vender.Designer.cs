@@ -30,22 +30,26 @@
         {
             dataGridView1 = new DataGridView();
             label1 = new Label();
-            ImagenProducto = new DataGridViewTextBoxColumn();
+            btnProducto = new Button();
+            button1 = new Button();
+            IdProducto = new DataGridViewTextBoxColumn();
             NombreProducto = new DataGridViewTextBoxColumn();
             PrecioProducto = new DataGridViewTextBoxColumn();
             StockProducto = new DataGridViewTextBoxColumn();
-            VenderBoton = new DataGridViewButtonColumn();
+            EliminarBoton = new DataGridViewButtonColumn();
+            ModificarBoton = new DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ImagenProducto, NombreProducto, PrecioProducto, StockProducto, VenderBoton });
-            dataGridView1.Location = new Point(12, 106);
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { IdProducto, NombreProducto, PrecioProducto, StockProducto, EliminarBoton, ModificarBoton });
+            dataGridView1.Location = new Point(12, 98);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(776, 51);
+            dataGridView1.Size = new Size(725, 52);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // label1
             // 
@@ -57,41 +61,75 @@
             label1.Text = "VENTAS ";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // ImagenProducto
+            // btnProducto
             // 
-            ImagenProducto.HeaderText = "Imagen";
-            ImagenProducto.Name = "ImagenProducto";
-            ImagenProducto.Width = 80;
+            btnProducto.Location = new Point(12, 69);
+            btnProducto.Name = "btnProducto";
+            btnProducto.Size = new Size(75, 23);
+            btnProducto.TabIndex = 8;
+            btnProducto.Text = "AGREGAR";
+            btnProducto.UseVisualStyleBackColor = true;
+            //btnProducto.Click += btnInicioSesion_Click;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(12, 40);
+            button1.Name = "button1";
+            button1.Size = new Size(34, 23);
+            button1.TabIndex = 9;
+            button1.Text = "°°°";
+            button1.UseVisualStyleBackColor = true;
+            //button1.Click += button1_Click;
+            // 
+            // IdProducto
+            // 
+            IdProducto.DataPropertyName = "Id";
+            IdProducto.HeaderText = "ID";
+            IdProducto.Name = "IdProducto";
+            IdProducto.Width = 40;
             // 
             // NombreProducto
             // 
+            NombreProducto.DataPropertyName = "Nombre";
             NombreProducto.HeaderText = "Producto";
             NombreProducto.Name = "NombreProducto";
             NombreProducto.Width = 200;
             // 
             // PrecioProducto
             // 
+            PrecioProducto.DataPropertyName = "Precio";
             PrecioProducto.HeaderText = "Precio";
             PrecioProducto.Name = "PrecioProducto";
-            PrecioProducto.Width = 200;
+            PrecioProducto.Width = 190;
             // 
             // StockProducto
             // 
+            StockProducto.DataPropertyName = "Stock";
             StockProducto.HeaderText = "Stock";
             StockProducto.Name = "StockProducto";
-            StockProducto.Width = 200;
+            StockProducto.Width = 190;
             // 
-            // VenderBoton
+            // EliminarBoton
             // 
-            VenderBoton.HeaderText = "Vender";
-            VenderBoton.Name = "VenderBoton";
-            VenderBoton.Width = 50;
+            EliminarBoton.HeaderText = "-";
+            EliminarBoton.Name = "EliminarBoton";
+            EliminarBoton.Width = 30;
+            // 
+            // ModificarBoton
+            // 
+            ModificarBoton.HeaderText = "+";
+            ModificarBoton.Name = "ModificarBoton";
+            ModificarBoton.Resizable = DataGridViewTriState.True;
+            ModificarBoton.SortMode = DataGridViewColumnSortMode.Automatic;
+            ModificarBoton.Width = 30;
             // 
             // Vender
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
+            Controls.Add(btnProducto);
             Controls.Add(label1);
             Controls.Add(dataGridView1);
             Name = "Vender";
@@ -104,10 +142,13 @@
 
         private DataGridView dataGridView1;
         private Label label1;
-        private DataGridViewTextBoxColumn ImagenProducto;
+        private Button btnProducto;
+        private Button button1;
+        private DataGridViewTextBoxColumn IdProducto;
         private DataGridViewTextBoxColumn NombreProducto;
         private DataGridViewTextBoxColumn PrecioProducto;
         private DataGridViewTextBoxColumn StockProducto;
-        private DataGridViewButtonColumn VenderBoton;
+        private DataGridViewButtonColumn EliminarBoton;
+        private DataGridViewButtonColumn ModificarBoton;
     }
 }
